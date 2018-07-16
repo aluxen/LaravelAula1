@@ -15,10 +15,18 @@ Route::get('/olamundo', function(){
 	return "Hello World!";
 });
 
-Route::get('/olapessoa/{name}', function($name='Estranho'){
+Route::get('/olapessoa/{name}', function($name='Rafa'){
 	return "Hello " . $name;
 });
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/copo', function(){
+	return "Vai toma no copo";
+});
+
+Route::get('paramaiusculo/{palavra}','StringsController@paraMaiusculo'); 
+
+Route::get('paramaiusculoformatada/{palavra}','StringsController@paraMaiusculoFormatada'); 
